@@ -1,0 +1,13 @@
+// /routes/giftRoutes.js
+import express from "express";
+import { getAllGifts, getGiftById } from "../controllers/giftController.js";
+
+const router = express.Router();
+
+// Route "/" serves all gifts: /api/gifts
+router.get("/", getAllGifts);
+
+// Route "/:id" serves a specific gift by ID: /api/gifts/:id
+router.get("/:id", getGiftById);
+
+export default router;
